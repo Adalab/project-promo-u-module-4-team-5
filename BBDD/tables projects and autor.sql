@@ -109,3 +109,5 @@ WHERE projects.fk_autor = autor.idAutor AND autor.idAutor = 4;
 
 SELECT * FROM projects;
 SELECT * FROM autor;
+
+probar y borrar
