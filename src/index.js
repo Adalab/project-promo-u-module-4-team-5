@@ -39,19 +39,18 @@ app.get('/api/projects', async (req, res) => {
     projects: results,
   });
 });
-
 /*
+// POST
 app.post('/api/create-projects', async (req, res) => {
   const conn = await getConnection();  
-  const query = 'SELECT autor.idAutor, autor.name, autor.image, projects.idProject, projects.slogan, projects.photo FROM autor, projects WHERE projects.fk_autor = autor.idAutor;';
+  const query = 'INSERT INTO projects(name, slogan, repo, demo, technologies, `desc`, photo)VALUES ("Pepita","Tu Proyecto favorito","url.repo.pepito","pepita.com","html, css","","photo-pepita.png")';
   const [results] = await conn.query(query);
   conn.end();
   res.json({
-    msj: 'todo muy bien',
+    msj: 'Esto va bien',
     projects: results,
   });
 });
 */
-
 const staticAppPath = './web/dist/';
 app.use(express.static(staticAppPath));
