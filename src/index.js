@@ -31,7 +31,7 @@ app.listen(appPort, () => {
 //Endpoint para todos los proyectos
 app.get('/listproject', async (req, res) => {
   const conn = await getConnection();  
-  const query = 'SELECT * FROM autor, projects WHERE projects.fk_autor = autor.idAutor;';
+  const query = 'SELECT * FROM autor, projects WHERE projects.fk_autor = autor.idAutor ORDER BY idProject desc;';
   const [results] = await conn.query(query);
   conn.end();
   res.json({
