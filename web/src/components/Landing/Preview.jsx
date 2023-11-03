@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-import '../../styles/layouts/CardPreview.scss';
+import '../../styles/layouts/Landing.scss';
+import defaultAvatar from '../../images/Avatar1.jpg';
 
 const Preview = ({data}) => {
   return (
-    <div>
-
-<section className="preview">
-     <section className="autor">
+      <section className="article">
         <section className="info-project">
           <p className="subtitle">Personal Project Card</p>
           <hr className="line" />
@@ -34,16 +32,13 @@ const Preview = ({data}) => {
         <section className="info-autor">
           <img
             className="image"
-            src={data.image}
+            src={defaultAvatar} // cambiar por data.image
             alt=""
           />
           <p className="job">{data.job}</p>
           <p className="name">{data.author} </p>
         </section>
       </section>
-    </section>
-
-    </div>
   )
 }
 

@@ -49,10 +49,15 @@ a {
 }
 
 .landing .btn {
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-inline: auto;
+  max-width: 500px;
   margin-bottom: 50px;
-  padding: 2rem;
+  padding: 1.5rem;
   font-size: 16px;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
 }
 
 .logo {

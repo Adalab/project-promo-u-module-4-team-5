@@ -3,6 +3,7 @@ import logoNuestro from "../../images/logo-nuestro.png";
 import api from "../../services/CalltoApi"; /* llamamos api a la funcion getData Project de CallToApi*/
 import Preview from "./Preview";
 import { useState, useEffect } from "react";
+import '../../styles/layouts/Landing.scss';
 
 const Landing = () => {
   const [listProject, setListProject] = useState([]);
@@ -23,12 +24,12 @@ const Landing = () => {
         <img src={logoNuestro} alt="cohete" className="logo"></img>{" "}
       </Link>
 
-      <section>
-          {listProject.map((project) => {
-          console.log(project);
-          return <Preview key={project.id} data={project} />;
-          
-        })}           
+      <section className="articlesContainer">
+          { listProject.map((project) => {
+            console.log(project);
+            return <Preview key={project.id} data={project} />;
+            }
+          )}           
       </section>
 
     </div>
@@ -36,7 +37,3 @@ const Landing = () => {
 };
 export default Landing;
 
-
-{/* <li className="liMovies">
-  <MovieSceneItem movie={movie} />
-</li> */}
