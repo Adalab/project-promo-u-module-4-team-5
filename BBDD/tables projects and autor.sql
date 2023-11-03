@@ -103,11 +103,13 @@ UPDATE projects SET idProject = 8 WHERE idProject = 10;
 ALTER TABLE projects ADD COLUMN fk_autor INT;
 ALTER TABLE projects ADD FOREIGN KEY(fk_autor) REFERENCES autor(idAutor);
 
-SELECT autor.idAutor, autor.name, autor.image, projects.idProject, projects.slogan, projects.photo
+SELECT *
 FROM autor, projects
-WHERE projects.fk_autor = autor.idAutor AND autor.idAutor = 4;
+WHERE projects.fk_autor = autor.idAutor;
 
 SELECT * FROM projects;
 SELECT * FROM autor;
 
-probar y borrar
+ALTER TABLE autor
+CHANGE COLUMN name author VARCHAR(45);
+

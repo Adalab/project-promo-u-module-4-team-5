@@ -1,5 +1,4 @@
 # project-promo-u-module-3-team-5
-hola
 ## :construction: Proyectos Molones - In Progress
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20PROGRESS-green)

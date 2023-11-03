@@ -29,9 +29,9 @@ app.listen(appPort, () => {
 });
 
 //Endpoint para todos los proyectos
-app.get('/api/projects', async (req, res) => {
+app.get('/listproject', async (req, res) => {
   const conn = await getConnection();  
-  const query = 'SELECT autor.idAutor, autor.name, autor.image, projects.idProject, projects.slogan, projects.photo FROM autor, projects WHERE projects.fk_autor = autor.idAutor;';
+  const query = 'SELECT * FROM autor, projects WHERE projects.fk_autor = autor.idAutor;';
   const [results] = await conn.query(query);
   conn.end();
   res.json({
