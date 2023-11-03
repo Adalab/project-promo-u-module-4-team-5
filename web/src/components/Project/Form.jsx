@@ -39,7 +39,7 @@ function Form({
           <input
             className="input"
             type="text"
-            placeholder="Nombre del proyecto: Mi proyecto"
+            placeholder="Nombre del proyecto"
             name="name"
             id="name"
             value={data.name}
@@ -52,7 +52,7 @@ function Form({
             type="text"
             name="slogan"
             id="slogan"
-            placeholder="Slogan: Mi slogan"
+            placeholder="Slogan"
             value={data.slogan}
             onChange={handleInput}
             required

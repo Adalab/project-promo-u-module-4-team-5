@@ -48,7 +48,7 @@ function CardPreview({ data, avatarAutor, avatarProject }) {
             alt=""
           />
           <p className="job">{data.job || 'Full Stack Developer'}</p>
-          <p className="name">{data.autor || 'Emmelie Björklund'} </p>
+          <p className="name">{data.autor || 'Úrsula Micaela Morata'} </p>
         </section>
       </section>
     </section>

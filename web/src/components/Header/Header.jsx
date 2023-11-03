@@ -22,11 +22,11 @@ function Header() {
         />
       </div>
       <header className="header">
-        <h1 className="title">Proyectos Molones</h1>
+        <h1 className="title">Proyectos Cohete</h1>
         <p className="desc">
           Escaparate en línea para recoger ideas a través de la tecnología.{' '}
         </p>
-        <a className="btn" href={null}>
+        <a className="btn" href="/">
           Ver proyectos
         </a>
       </header>

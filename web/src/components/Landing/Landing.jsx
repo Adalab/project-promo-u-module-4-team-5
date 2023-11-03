@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoNuestro from "../../images/logo-nuestro.png";
-import api from "../../services/CalltoApi"; /* llamamos api a la funcion getData Project de CallToApi*/
+import api from "../../services/callToApi"; /* llamamos api a la funcion getDataProjectsApi de callToApi*/
 import Preview from "./Preview";
 import { useState, useEffect } from "react";
 import '../../styles/layouts/Landing.scss';
@@ -20,7 +20,7 @@ const Landing = () => {
   return (
     <div className="landing">
       <Link to="/create-projects" className="btn">
-        Crear Proyectos Cohete{" "}
+        Crear Proyecto Cohete{" "}
         <img src={logoNuestro} alt="cohete" className="logo"></img>{" "}
       </Link>
 

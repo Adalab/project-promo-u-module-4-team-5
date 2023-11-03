@@ -45,7 +45,7 @@
 
 .main .input,
 .textarea {
-  background: rgba(29,36,55,1);
+  background: rgba(29, 36, 55, 1);
   border-color: white;
   border-radius: 1rem;
   border: solid 1px rgba(255, 255, 255, 0.541);
@@ -58,7 +58,7 @@
   display: none;
   color: #ffffff;
   font-size: 14px;
-  margin-bottom: -.15rem;
+  margin-bottom: -0.15rem;
 }
 
 .main .input::placeholder,
@@ -67,7 +67,7 @@
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -87,17 +87,17 @@ textarea:valid {
 .main .textarea {
   padding-top: 12px;
   height: 80px;
-  padding-right: .75rem;
+  padding-right: 0.75rem;
   hyphens: auto;
 }
 
 .main .buttons-img {
   display: flex;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
   @media screen and (max-width: 768px) {
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 }
 
@@ -108,7 +108,10 @@ textarea:valid {
   margin-top: 10px;
   border: solid 1px white;
   background: linear-gradient(90deg, #495b8f -1.57%, #5c7ebd 98.43%);
-  
+  &:hover {
+    background: linear-gradient(90deg, #5a70b1 -1.57%, #7099e6 98.43%);
+  }
+
   @media screen and (max-width: 768px) {
     width: 80%;
     margin-inline: auto;
@@ -123,19 +126,19 @@ textarea:valid {
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  text-shadow: 0px 2px 5px rgba(9,30,71,0.97);
+  text-shadow: 0px 2px 5px rgba(9, 30, 71, 0.97);
 }
 
 .card a {
   font-size: 16px;
   margin-inline: auto;
-  width: 250px; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media screen and (max-width: 768px) {
     font-size: 15px;
-    width: 210px; 
+    width: 210px;
   }
 }
 
@@ -146,5 +149,5 @@ textarea:valid {
 .red {
   color: red;
   font-weight: 500;
-  text-shadow: 0px 2px 5px rgba(9,30,71,0.97);
+  text-shadow: 0px 2px 5px rgba(9, 30, 71, 0.97);
 }

@@ -1,7 +1,7 @@
 //React
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router';
-//services
+//Services
 import ls from '../services/localStorage';
 
 //Components
@@ -10,15 +10,12 @@ import Form from './Project/Form';
 import CardPreview from './Project/CardPreview';
 import GetAvatar from './GetAvatar';
 import Landing from './Landing/Landing';
-// import Footer from "./Footer/Footer";
 
 //Styles
 import '../styles/App.scss';
 
 function App() {
-  //funciones, variables, handles,
-
-  const dataObject = {
+  const dataEmptyObject = {
     name: '',
     slogan: '',
     repo: '',
@@ -30,36 +27,30 @@ function App() {
     image: '',
     photo: '',
   };
-  const [data, setData] = useState(ls.get('dataLS', dataObject));
+  const [data, setData] = useState(ls.get('dataLS', dataEmptyObject));
 
   const [error, setError] = useState('');
   const [cardSectionIsVisible, setCardSectionIsVisible] = useState(false);
   const [cardUrl, setCardUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const [avatarAutor, setAvatarAutor] = useState(ls.get('elAvatarAutor', ''));
-  const [avatarProject, setAvatarProject] = useState(
-    ls.get('elAvatarProject', '')
-  );
+  const [avatarAutor, setAvatarAutor] = useState('');
+  const [avatarProject, setAvatarProject] = useState('');
+
+  useEffect(() => ls.set('dataLS', data), [data]);
 
   const updateAvAutor = (avatar) => {
     setAvatarAutor(avatar);
-    ls.set('elAvatarAutor', avatar);
     setData({ ...data, ['image']: avatar });
-    ls.set('dataLS', data);
   };
   const updateAvProject = (avatar) => {
     setAvatarProject(avatar);
-    ls.set('elAvatarProject', avatar);
     setData({ ...data, ['photo']: avatar });
-    ls.set('dataLS', data);
   };
 
   const handleClickInput = (value, id) => {
     setCardSectionIsVisible(false);
     setData({ ...data, [id]: value });
-    //console.log('data', data)
-    ls.set('dataLS', data);
   };
 
   const fetchInfoCard = () => {
@@ -71,7 +62,6 @@ function App() {
     })
       .then((response) => response.json())
       .then((responseJSON) => {
-        //console.log(responseJSON);
         if (responseJSON.success === false) {
           setIsLoading(false);
           setError('Error en el servidor');
@@ -79,7 +69,6 @@ function App() {
           setIsLoading(false);
           setError('');
           setCardUrl(responseJSON.cardURL);
-          // localStorage.setItem('datainfo', JSON.stringify(data));
         }
       });
   };
@@ -98,6 +87,7 @@ function App() {
       setError('Te has dejado campos por rellenar');
     } else {
       fetchInfoCard();
+      setData(dataEmptyObject);
     }
     setCardSectionIsVisible(true);
   };
