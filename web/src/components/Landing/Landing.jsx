@@ -25,7 +25,7 @@ const Landing = () => {
 
       <section className="articlesContainer">
           { listProject.map((project) => {
-            return <Preview key={project.id} data={project} />;
+            return <Preview key={project.idProject} data={project} />;
             }
           )}           
       </section>
