@@ -89,6 +89,8 @@ function App() {
     } else {
       fetchInfoCard();
       setData(dataEmptyObject);
+      setAvatarAutor('');
+      setAvatarProject('');
     }
     setCardSectionIsVisible(true);
   };
