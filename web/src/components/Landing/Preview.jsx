@@ -4,7 +4,7 @@ import '../../styles/layouts/Landing.scss';
 
 const Preview = ({ data }) => {
   return (
-    <a className='links' href={`http://localhost:3110/project/${data.idProject}`}>
+    <a className="links" href={`project/${data.idProject}`}>
       <section className="article">
         <section className="info-project">
           <p className="subtitle">Personal Project Card</p>
@@ -18,12 +18,12 @@ const Preview = ({ data }) => {
               <p className="text">{data.technologies}</p>
             </section>
             <section className="demo repo">
-              <a href={data.demo} target="_blank" rel="noreferrer">
-                <i className="fa-solid fa-globe"></i>
-              </a>
-              <a href={data.repo} target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-github"></i>
-              </a>
+              {/* <a href={data.demo} target="_blank" rel="noreferrer"> */}
+              <i className="fa-solid fa-globe"></i>
+              {/* </a> */}
+              {/* <a href={data.repo} target="_blank" rel="noreferrer"> */}
+              <i className="fa-brands fa-github"></i>
+              {/* </a> */}
             </section>
           </div>
         </section>
@@ -31,7 +31,7 @@ const Preview = ({ data }) => {
         <section className="info-autor">
           <img
             className="image"
-            src={data.image} // cambiar por data.image defaultAvatar
+            src={data.image}
             alt=""
           />
           <p className="job">{data.job}</p>
