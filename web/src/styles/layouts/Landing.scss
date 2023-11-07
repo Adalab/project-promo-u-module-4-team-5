@@ -26,22 +26,21 @@
   margin-inline: auto;
   display: flex;
   flex-direction: row-reverse;
-  padding-top: 1.6rem;
+  padding-block: 16px;
+  padding-inline: 12px;
   gap: 20px;
   background-color: white;
   color: #3e3e3e;
-  min-width: 350px;
+  min-width: 380px;
   width: 75%;
-  aspect-ratio: 6 / 4;
+  /* aspect-ratio: 6 / 4; */
   border-radius: 20px;
   @media screen and (max-width: 768px) {
     margin-inline: auto;
     min-width: 250px;
     width: 90%;
-    aspect-ratio: unset;
+    /* aspect-ratio: unset; */
     gap: 14px;
-    padding-block: 16px;
-    padding-inline: 12px;
   }
 }
 
