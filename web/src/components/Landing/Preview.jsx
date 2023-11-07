@@ -2,8 +2,9 @@
 import '../../styles/layouts/Landing.scss';
 // import defaultAvatar from '../../images/Avatar1.jpg';
 
-const Preview = ({data}) => {
+const Preview = ({ data }) => {
   return (
+    <a className='links' href={`http://localhost:3110/project/${data.idProject}`}>
       <section className="article">
         <section className="info-project">
           <p className="subtitle">Personal Project Card</p>
@@ -11,9 +12,7 @@ const Preview = ({data}) => {
 
           <h2 className="title">{data.name}</h2>
           <p className="slogan">{data.slogan}</p>
-          <p className="desc">
-            {data.desc}
-          </p>
+          <p className="desc">{data.desc}</p>
           <div className="techDemoRepo">
             <section className="technologies">
               <p className="text">{data.technologies}</p>
@@ -39,7 +38,8 @@ const Preview = ({data}) => {
           <p className="name">{data.author} </p>
         </section>
       </section>
-  )
-}
+    </a>
+  );
+};
 
-export default Preview
+export default Preview;

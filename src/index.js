@@ -38,14 +38,13 @@ app.get('/listproject', async (req, res) => {
   const [results] = await conn.query(query);
   conn.end();
   res.json({
-    msj: 'todo muy bien',
+    success: true,
     projects: results,
   });
 });
 
 app.post('/createproject', async (req, res) => {
   const body = req.body;
-  console.log(body);
   const conn = await getConnection();
 
   const insertUser = 'INSERT INTO autor (author, image, job) values (?, ?, ?);';
