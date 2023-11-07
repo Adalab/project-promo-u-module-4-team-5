@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import '../../styles/layouts/Landing.scss';
-import defaultAvatar from '../../images/Avatar1.jpg';
+// import defaultAvatar from '../../images/Avatar1.jpg';
 
 const Preview = ({data}) => {
   return (
@@ -32,7 +32,7 @@ const Preview = ({data}) => {
         <section className="info-autor">
           <img
             className="image"
-            src={defaultAvatar} // cambiar por data.image
+            src={data.image} // cambiar por data.image defaultAvatar
             alt=""
           />
           <p className="job">{data.job}</p>

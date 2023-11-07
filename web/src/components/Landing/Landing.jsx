@@ -11,7 +11,6 @@ const Landing = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await api();
-      console.log(data);
       setListProject(data.projects);
     };
     fetchData();
@@ -26,7 +25,6 @@ const Landing = () => {
 
       <section className="articlesContainer">
           { listProject.map((project) => {
-            console.log(project);
             return <Preview key={project.id} data={project} />;
             }
           )}           

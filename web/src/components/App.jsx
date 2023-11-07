@@ -55,13 +55,14 @@ function App() {
 
   const fetchInfoCard = () => {
     setIsLoading(true);
-    fetch('https://dev.adalab.es/api/projectCard', {
+    fetch('http://localhost:3110/createproject', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((responseJSON) => {
+        console.log(responseJSON);
         if (responseJSON.success === false) {
           setIsLoading(false);
           setError('Error en el servidor');

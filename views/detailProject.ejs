@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <title>Proyecto Cohete</title>
+  </head>
+  <body>
+    <section class="preview">
+      <img class="image" src="<%= photo %>" alt="" />
+
+      <section class="autor">
+        <section class="info-project">
+          <p class="subtitle">Personal Project Card</p>
+          <hr class="line" />
+
+          <h2 class="title"><%= name %></h2>
+          <p class="slogan"><%= slogan %></p>
+          <p class="desc"><%= desc %></p>
+          <div class="techDemoRepo">
+            <section class="technologies">
+              <p class="text"><%= technologies %></p>
+            </section>
+            <section class="demo repo">
+              <a href="<%= demo %>" target="_blank" rel="noreferrer">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+              <a href="<%= repo %>" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </section>
+          </div>
+        </section>
+
+        <section class="info-autor">
+          <img class="image" src="<%= image %>" alt="" />
+          <p class="job"><%= job %></p>
+          <p class="name"><%= author %></p>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
