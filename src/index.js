@@ -86,7 +86,6 @@ app.get('/project/:idproject', async (req, res) => {
     'SELECT * FROM autor, projects WHERE projects.fk_autor = autor.idAutor AND idproject = ?';
   const conn = await getConnection();
   const [results] = await conn.query(selectProject, [id]);
-  console.log(results[0]);
   if (results.length === 0) {
     res.render('notFound');
   } else {

@@ -62,7 +62,6 @@ function App() {
     })
       .then((response) => response.json())
       .then((responseJSON) => {
-        console.log(responseJSON);
         if (responseJSON.success === false) {
           setIsLoading(false);
           setError('Error en el servidor');
