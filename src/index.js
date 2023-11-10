@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
-
+require("dotenv").config();
 //Crear servidor
 const app = express();
 
@@ -16,7 +16,7 @@ async function getConnection() {
   const connection = await mysql.createConnection({
     host: 'sql.freedb.tech',
     user: 'freedb_rocketadmin',
-    password: 'xvzNgcE4V3@F5dg',
+    password: process.env.PASS, 
     database: 'freedb_rocket_projects',
   });
   connection.connect();
