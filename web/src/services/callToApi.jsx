@@ -1,7 +1,7 @@
 // import React from 'react'
 
 const getDataProjects = async () => {
- const fetchData = await fetch("http://localhost:3110/listproject");
+ const fetchData = await fetch("https://rocket-project.onrender.com/listproject");
  const dataJson = await fetchData.json();
  return dataJson;
 }

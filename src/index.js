@@ -76,7 +76,7 @@ app.post('/createproject', async (req, res) => {
 
   res.json({
     success: true,
-    cardURL: 'http://localhost:3110/project/' + resultProject.insertId,
+    cardURL: 'https://rocket-project.onrender.com/project/' + resultProject.insertId,
   });
 });
 
@@ -93,7 +93,7 @@ app.get('/project/:idproject', async (req, res) => {
   }
 });
 
-const staticAppPath = './web/dist/';
+const staticAppPath = './src/public-react';
 app.use(express.static(staticAppPath));
 
 const pathServerPublicStyles = './src/public-css';

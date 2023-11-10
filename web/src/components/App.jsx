@@ -55,7 +55,7 @@ function App() {
 
   const fetchInfoCard = () => {
     setIsLoading(true);
-    fetch('http://localhost:3110/createproject', {
+    fetch('https://rocket-project.onrender.com/createproject', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
