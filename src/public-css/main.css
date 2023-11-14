@@ -60,11 +60,24 @@ h2 {
 @media screen and (max-width: 768px) {
     .container {
         height: 100%;
+        min-width: 300px;
         margin-block: 0.5rem;
         margin-inline: 0.5rem;
         padding-inline: 16px;
     }
   }
+
+.container.noExist {
+    padding-top: 3.5rem;
+    padding-inline: 1.5rem;
+    text-align: center;
+}
+
+.sadRocket{
+    margin-top: 1rem;
+    width: 200px;
+    border-radius: 2rem;
+}
 
 .btn {
   display: flex;
@@ -102,6 +115,14 @@ h2 {
     width: 500px;
     border-radius: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+    .photo {
+        max-width: 250px;
+        width: 100%;
+        min-width: 100px;
+        margin-inline: auto;
+    }
+}
 
 .card {
     margin-inline: auto;
@@ -128,8 +149,10 @@ h2 {
 @media screen and (max-width: 768px) {
     .card {
         margin-inline: auto;
-        min-width: 250px;
-        /* width: 90%; */
+        min-width: 280px;
+        width: 100%;
+        max-width: 320px;
+        margin-top: 1rem;
         aspect-ratio: unset;
         gap: 14px;
     }
