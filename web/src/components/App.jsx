@@ -85,6 +85,8 @@ function App() {
       data.job === ''
     ) {
       setError('Te has dejado campos por rellenar');
+    } else if (data.image === '' || data.photo === '') {
+      setError('Te has olvidado alguna imagen');
     } else {
       fetchInfoCard();
       setData(dataEmptyObject);
